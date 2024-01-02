@@ -1,9 +1,0 @@
-@@ -54,6 +54,8 @@
- static const char *termcmd[]  = { "urxvtc", NULL };
- static const char *filemancmd[]  = { "thunar", NULL };
- 
-+#include "selfrestart.c"
-+
- static Key keys[] = {
- 	/* modifier                     key        function        argument */
- 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
