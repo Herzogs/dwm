@@ -65,6 +65,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 #include "selfrestart.c"
+#include "mpdcontrol.c"
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -109,6 +110,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
     { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
 	{ MODKEY|ShiftMask,             XK_q,      exitdwm,           {0} },
+	{ MODKEY,                       XK_F1,     mpdchange,      {.i = -1} },
+	{ MODKEY,                       XK_F2,     mpdchange,      {.i = +1} },
+	{ MODKEY,                       XK_Escape, mpdcontrol,     {0} },
 };
 
 /* button definitions */
