@@ -8,7 +8,7 @@
 #define MPDHOST "localhost"
 #define MPDPORT 6600
 
-struct mpd_connection *get_conn(){
+struct mpd_connection *get_conn(void){
     struct mpd_connection *conn;
 
     conn = mpd_connection_new(MPDHOST, MPDPORT, 1000);

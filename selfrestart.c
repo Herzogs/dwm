@@ -12,7 +12,7 @@
  *
  * @return char* the path of the current executable
  */
-char *get_dwm_path(){
+char *get_dwm_path(void){
     struct stat s;
     int r, length, rate = 42;
     char *path = NULL;
